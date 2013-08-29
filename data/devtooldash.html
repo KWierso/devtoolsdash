@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <style>
+      select {
+        width: 200px;
+      }
+      
+      .hidden {
+        display:none!important;
+      }
+      
+      *[selectedcomponent=false] {
+        display: none!important;
+      }
+      
+      *[assignedhidden=true] {
+        display: none!important;
+      }
+      
+      #bugdetails > div {
+        border: 1px solid black;
+        clear:both!important;
+        text-align:center;
+      }
+      
+      #ID {
+        text-decoration:underline;
+      }
+      
+      #bugdetails > div > div {
+        float:left!important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      
+      #bugdetails > div > div:nth-child(1) {
+        width: 60px;
+      }
+      
+      #bugdetails > div > div:nth-child(2) {
+        width: 310px;
+      }
+      
+      #bugdetails > div > div:nth-child(3) {
+        width: 160px;
+      }
+      
+      #bugdetails > div > div:nth-child(4) {
+        width: 50px;
+      }
+      
+      #bugdetails > div > div:nth-child(5) {
+        width: 60px;
+        text-overflow: ellipsis;
+      }
+      
+      #bugdetails > div > div:nth-child(6) {
+        width: 210px;
+        text-overflow: ellipsis;
+      }
+      
+      #bugdetails > div > div:nth-child(7) {
+        width: 210px;
+        text-overflow: ellipsis;
+      }
+      
+      @media all and (min-width: 926px) and (max-width: 1146px) {
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+      
+      @media all and (min-width: 0px) and (max-width: 926px) {
+        #bugdetails > div > div:nth-child(5) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+      
+      @media all and (min-width: 0px) and (max-width: 857px) {
+        #bugdetails > div > div:nth-child(4) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(5) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+      
+      @media all and (min-width: 0px) and (max-width: 796px) {
+        #bugdetails > div > div:nth-child(6) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(4) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(5) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+      
+      @media all and (min-width: 0px) and (max-width: 576px) {
+        #bugdetails > div > div:nth-child(3) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(6) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(4) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(5) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+      
+      @media all and (min-width: 0px) and (max-width: 406px) {
+        #bugdetails > div > div:nth-child(1) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(3) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(6) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(4) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(5) {
+          display:none!important;
+        }
+        #bugdetails > div > div:nth-child(7) {
+          display:none!important;
+        }
+      }
+    </style
+    </style>
+  </head>
+  <body>
+    <div id="counts">
+      <h2>Bugs by Component</h2>
+      <select id="countselect" disabled="true">
+        <option>FETCHING BUG COUNTS</option>
+      </select>
+      <select id="assignedselect" disabled="true">
+        <option> Show all bugs </option>
+        <option> Show unassigned bugs </option>
+        <option> Show assigned bugs </option>
+      </select>
+    </div>
+    <div id="bugs">
+      <h2>Bug Details</h2>
+      
+      <h3 id="fetchingheader"> FETCHING BUG DETAILS </h3>
+      <div id="bugdetails" class="hidden"></div>
+    </div>
+  </body>
+</html>
